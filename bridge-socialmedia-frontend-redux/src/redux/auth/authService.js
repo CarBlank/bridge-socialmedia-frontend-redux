@@ -71,7 +71,7 @@ const token = JSON.parse(localStorage.getItem('token'))
      authorization: token,
    }
  })
-  if (res.data) localStorage.clear()
+  if (res.data) localStorage.clear() 
  return res.data
 }
 
