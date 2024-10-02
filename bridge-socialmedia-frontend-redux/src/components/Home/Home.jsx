@@ -1,10 +1,15 @@
-import React from "react";
-import TheHeader from "../TheHeader/TheHeader";
+import React from 'react'
+import Posts from '../Post/Posts/Posts'
+import PostCreate from '../Post/CreatePost'
 
 const Home = () => {
-  return <div>Home
+    return (
+      <>
+        <h1>Home</h1>
+        <Posts/>
+        <PostCreate/>
 
-  </div>;
-};
-
-export default Home;
+      </>
+    )
+   }
+   export default Home

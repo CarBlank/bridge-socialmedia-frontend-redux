@@ -1,0 +1,21 @@
+.header {
+
+    width: 100vw;
+    background-color: #212121;
+    padding: 20px 40px 20px 40px;
+
+    &__link {
+        color: white;
+    }
+
+    &__btn {
+        padding: 10px;
+        align-content: center;
+        min-width: 60px;
+        background-color: white;
+        border-radius: 40px;
+        
+    }
+
+
+}

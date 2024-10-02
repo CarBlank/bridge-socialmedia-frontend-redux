@@ -2,6 +2,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../redux/auth/authSlice'
 
+import { UserOutlined } from '@ant-design/icons'
+
+import "./TheHeader.scss"
+
 const TheHeader = () => {
  const navigate = useNavigate()
  const dispatch = useDispatch()
@@ -11,14 +15,32 @@ const TheHeader = () => {
    dispatch(logout())
    navigate('/login')
  }
+
+//  const [postName, setPostName] = useState('')
+
+//   const handleChange = (e) => {
+//     setPostName(e.target.value)
+ 
+//   if (e.key === 'Enter') {
+//     console.log(postName)
+//     navigate(`/search/${postName}`)
+//   }
+ 
+//  }
+
  return (
-    <nav>
-      <h1>header</h1>
+    <nav className='header'>
+      {/* <h1>header</h1> */}
+      {/* <input 
+    onKeyUp={handleChange}
+    placeholder="search post"
+    name="text"
+  /> */}
       {user ? (
         <>
-          <button onClick={onLogout}>Logout</button>
           <Link to="/">Home</Link>
-          <Link to="/profile">Profile | {user.name}</Link>
+          <Link to="/profile" className='header__link'><UserOutlined /> Profile | {user.name}</Link>
+          <button onClick={onLogout} className='header__btn'>Logout</button>
         </>
       ) : (
         <>
